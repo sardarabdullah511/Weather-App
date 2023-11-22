@@ -9,7 +9,7 @@ if(error){
 else if(body.error){
     callback("unable to find address", undefined);
 }else{
-    callback(undefined,'it is currently ' + body.current.temperature + ' degree out. It fell like  '+body.current.feelslike)
+    callback(undefined,body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degree out. It feels like  '+body.current.feelslike + 'degress out. The humidity is ' + body.current.humidity + '%.')
 }
     })
 
